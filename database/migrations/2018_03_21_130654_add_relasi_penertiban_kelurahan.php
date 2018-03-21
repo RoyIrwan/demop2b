@@ -14,6 +14,7 @@ class AddRelasiPenertibanKelurahan extends Migration
     public function up()
     {
         Schema::table('penertiban', function (Blueprint $table) {
+            //nambah relasi ke table kelurahan
             $table->foreign('kelurahan_id')
                 ->references('id')
                 ->on('kelurahan');
